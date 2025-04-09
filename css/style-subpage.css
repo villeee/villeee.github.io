@@ -1,0 +1,341 @@
+/* MASONRY GRID */
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+.photo-gallery {
+  margin-top: 1rem;
+  display: flex;
+  gap: 20px;
+}
+
+.books-gallery {
+  margin-top: 1rem;
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.photo {
+  position: relative; /* Ensures the text and background are positioned relative to the photo */
+  overflow: hidden; /* Hides anything outside the photo boundaries */
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+
+/* Työt-galleria */
+
+.index-item {
+  position: relative;
+  width: 100%;
+}
+
+.index-item-link {
+  display: block;
+  text-decoration: none;
+}
+
+.index-item-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.index-item-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.infotext {
+  color: white;
+  font-size: 1.5rem; /* Adjust size as needed */
+  text-align: center;
+  padding: 10px;
+}
+
+.index-item-image-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.container-linear  {
+  display: grid;
+  grid-template-columns: 50% 50%; /* Responsive grid layout */
+  justify-content: space-between; /* Ensures even spacing between items */
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto; /* Centers the container */
+  gap: 10px; /* Adds spacing between items */
+}
+
+.container-linear .iframe {
+  flex: 1 1 calc(50% - 10px); /* Each video takes 50% of the row width minus the gap */
+  height: auto; /* Ensures the height adjusts proportionally */
+}
+
+.container-basic img {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.container h5 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.container-linear .item-linear {
+  flex: 1; /* Ensures all items take equal space */
+}
+
+.container-linear .item-linear img {
+  width: 100%; /* Makes the image fill its container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers its container */
+}
+
+
+/*
+@media(max-width:1024px) {
+  .photo-gallery {
+      flex-direction: column;
+  }
+
+}*/
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif; 
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensures the page takes up the full height of the viewport */
+}
+
+iframe { 
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+#page {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page container takes up the full height */
+}
+
+footer {
+  margin-top: auto; /* Pushes the footer to the bottom when content is insufficient */
+}
+
+.logo {
+  left: 0;
+  margin: 0;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 700;
+   align-self: center;
+  color: rgb(192, 51, 0);
+}
+
+#nav ul {
+  margin: 0;
+  list-style-type: none;
+  
+  padding: 0;
+  display: flex;
+}
+
+/* Linkkien tyyli */
+#nav a {
+  text-decoration: none;
+  text-transform: none;
+  
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgb(66, 66, 66);
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+/* Hover-efekti */
+#nav a:hover {
+  text-decoration: none;
+  color: rgb(192, 51, 0);
+  margin: 0;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.kuvateksti {
+  font-size: 1.5rem;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  
+}
+
+/* Header */
+h4 {
+  font-weight: 700;
+  font-style: normal;
+  top: 1rem;
+  left: 3rem;
+  font-size: 1rem;
+  z-index: 30;
+  text-align: left;
+  color: rgb(192, 51, 0);
+}
+
+h3 {
+  display: block;
+  font-size: 2rem;
+  margin: 2rem 0 0 0;
+  padding: 0;
+  font-weight: 500;
+  color:rgb(0, 0, 0);
+}
+
+/* Container module */
+.module {
+  position:relative;
+  width: 100%;
+}
+
+.module .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Changed from absolute to relative */
+  max-width: 1600px;
+  margin: 0 auto; /* Ensures it's centered within the module */
+  z-index: 15; /* Keeps it above other content */
+}
+
+/* Content wrapper inside the module */
+.module .container {
+  width: 100%;
+  max-width: 1600px;
+  overflow: visible; /* Allow the content to overflow */
+  margin: 0 auto; /* Centers the wrapper within the module */
+}
+
+#footer-container p {
+  padding: 6rem 0; /* Adjust this value as needed */
+  color: rgb(131, 131, 131);
+}
+
+
+  @keyframes fadeOut {
+    from {
+      clip-path: inset(0% 0% 0% 0%);
+    }
+    to {
+      clip-path: inset(0% 0% 100% 0%);
+    }
+  }
+
+  @keyframes zoom_image {
+    from {
+      transform: scale(1.05);
+    }
+    to {
+      transform: scale(1);
+    }
+}
+
+/* Responsive Design for mobile */
+
+@media (max-width: 768px) {
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.container h5 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+ }
+
+ h3 {
+  line-height: 1;
+  font-size: 1.8rem;
+ }
+
+  .container-linear {
+    grid-template-columns: 100%;
+}
+
+.photo-gallery {
+  flex-direction: column;
+}
+
+.books-gallery {
+  flex-direction: column;
+}
+
+#copyright  {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+}
+
+/* Responsive Design for tablets and larger screens */
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .container-linear {
+    grid-template-columns: 100%;
+}
+.photo-gallery {
+  flex-direction: column;
+}
+
+
+}
+
+/*
+@media(max-width:1024px) {
+  .container-linear {
+    flex-direction: column;
+    grid-template-columns: 100%;
+}

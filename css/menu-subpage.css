@@ -1,0 +1,119 @@
+
+
+.menus-container {
+    display: flex;
+    position: relative;
+    justify-content: right;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.menus-container a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits color from the parent element */
+  }
+
+nav {
+    padding: 0.8rem;
+    display: flex;
+    background-color: rgb(4, 17, 32);
+   border-radius: 50%;
+   margin: 0;
+}
+
+
+
+.ham-menu {
+    display: flex; /* Show ham-menu on mobile */
+    position: absolute;
+    align-items: center;
+    justify-content: center; /* Center spans inside the box */
+    width: 30px; /* Restore the original width */
+    height: 30px; /* Restore the original height */
+    cursor: pointer; /* Indicate it's clickable */
+    z-index: 11; /* Ensure ham-menu is above off-screen-menu */
+    position: relative; /* Ensure spans are positioned relative to this box */
+    background-color: transparent; /* No background for the box */
+    border: none; /* Remove any default borders */
+}
+
+.ham-menu span {
+    height: 3px; /* Restore the original height of spans */
+    width: 80%; /* Restore the original width of spans */
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
+}
+
+.ham-menu span:nth-child(1) {
+    top: 25%; /* Restore the original position of the first span */
+}
+
+.ham-menu span:nth-child(3) {
+    top: 75%; /* Restore the original position of the third span */
+}
+
+.ham-menu.active span:nth-child(1) {
+    top: 50%; /* Move to center */
+    transform: translate(-50%, -50%) rotate(45deg); /* Rotate to form a cross */
+}
+
+.ham-menu.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle span */
+}
+
+.ham-menu.active span:nth-child(3) {
+    top: 50%; /* Move to center */
+    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate to form a cross */
+}
+
+.off-screen-menu {
+    display: flex; /* Ensure it's ready to animate on mobile */
+    background-color: rgb(10, 37, 68);
+    width: 100vw; /* Cover the full width of the viewport */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100vw; /* Completely hide off-screen-menu by default */
+    visibility: hidden; /* Ensure it's not visible */
+    opacity: 0; /* Make it transparent */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+    z-index: 10;
+    transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; /* Smooth animation for sliding in */
+}
+
+.off-screen-menu.active {
+    right: 0;
+    visibility: visible; /* Make it visible */
+    opacity: 1; /* Make it opaque */
+}
+
+.off-screen-menu ul {
+    list-style-type: none;
+}
+
+.off-screen-menu a {
+    color: white;
+    text-decoration: none;
+    text-transform: none;
+    transition: color 0.3s;
+}
+
+.off-screen-menu a:hover {
+    text-decoration: none;
+    color: rgb(192, 51, 0);
+    margin: 0;
+}
+
+.ham-menu a[href="#carousel"] {
+  cursor: pointer; /* Change cursor to pointer for better UX */
+}

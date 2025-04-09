@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etusivu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://use.typekit.net/ngj3goq.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <link rel="stylesheet" href="css/cases.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <script src="js/topcarousel.js"></script>
+    <script src="js/cases.js"></script>
+    <script src="js/menu.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="module">
+      <div class="header-container-frontpage">
+        <div class="logo"><a href="../">VILLE EERIKÄINEN</a></div>
+        <!-- Menu -->
+        <div class="menus-container">
+          <nav>
+            <div class="ham-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </nav>
+          <div class="off-screen-menu">
+            <ul>
+              <li><a href="works/">Työt</a></li>
+              <li><a href="../">Etusivu</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Carousel Images Module -->
+      <div class="carousel-header-images">
+        <div id="bg1">
+          <div class="carousel-header-headline">
+            <div class="gradient"></div>
+            <div class="gradient-top-bottom"></div>
+            <div class="topheadline">Power BI ja käyttöliittymät</div>
+          </div>
+        </div>
+        <div id="bg2">
+          <div class="carousel-header-headline">
+            <div class="gradient"></div>
+            <div class="gradient-top-bottom"></div>
+            <div class="topheadline">Hankeviestintä</div>
+          </div>
+        </div>
+        <div id="bg3">
+          <div class="carousel-header-headline">
+            <div class="gradient"></div>
+            <div class="gradient-top-bottom"></div>
+            <div class="topheadline">Visuaalinen identiteetti</div>
+          </div>
+        </div>
+        <div id="bg4">
+          <div class="carousel-header-headline">
+            <div class="gradient"></div>
+            <div class="gradient-top-bottom"></div>
+            <div class="topheadline">Kansivalokuvaus</div>
+          </div>
+        </div>
+        <div id="bg5">
+          <div class="carousel-header-headline">
+            <div class="gradient"></div>
+            <div class="gradient-top-bottom"></div>
+            <div class="topheadline">Kuvituskuvat</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Competences -->
+    <div class="module">
+      <div class="container">
+        <h2>Mitä teen?</h2>
+        <div class="competences">
+          <p>
+            Data-analytiikka / Raportointi / Web design /
+            Käyttöliittymäsuunnittelu / Infografiikka / Graafinen suunnittelu /
+            Valokuvaaminen / Videokuvaaminen / Tekstisuunnittelu /
+            Käsikirjoittaminen / Kuvittaminen
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Caset -->
+    <div class="module">
+      <div class="cases-container">
+        <div class="carousel-header">
+          <h2>Työt</h2>
+          <div class="arrows-container">
+            <button
+              class="carousel-arrow carousel-arrow--prev"
+              onclick="handleCarouselMove(false)"
+            >
+              &#8249;
+            </button>
+            <button
+              class="carousel-arrow carousel-arrow--next"
+              onclick="handleCarouselMove()"
+            >
+              &#8250;
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel-container">
+          <div class="carousel-slide">
+            <div>
+              <a href="powerbi/"
+                ><img src="images/case01.jpg" alt="case01"
+              /></a>
+            </div>
+            <div class="slide-text-work">
+              Alueellisen liikennesuunnittelun karttaraportti
+            </div>
+            <div class="slide-text-client">Väylävirasto</div>
+          </div>
+          <div class="carousel-slide">
+            <div>
+              <a href="latoha/"><img src="images/case02.jpg" alt="case02" /></a>
+            </div>
+            <div class="slide-text-work">
+              Laurila−Tornio−Haaparanta-rataosan sähköistäminen
+            </div>
+            <div class="slide-text-client">Väylävirasto</div>
+          </div>
+          <div class="carousel-slide">
+            <div>
+              <a href="welado/"><img src="images/case03.jpg" alt="case03" /></a>
+            </div>
+            <div class="slide-text-work">Tapahtumavalokuvaus</div>
+            <div class="slide-text-client">Welado Oy</div>
+          </div>
+          <div class="carousel-slide">
+            <div>
+              <a href="arkworks/">
+                <img src="images/case04.png" alt="case04"
+              /></a>
+            </div>
+
+            <div class="slide-text-work">Visuaalinen ilme ja valokuvaus</div>
+            <div class="slide-text-client">Arkworks Arkkitehdit Oy</div>
+          </div>
+          <div class="carousel-slide">
+            <div>
+              <a href="books/"><img src="images/case05.jpg" alt="case05" /></a>
+            </div>
+            <div class="slide-text-work">Kansivalokuvaus</div>
+            <div class="slide-text-client">Freelancer</div>
+          </div>
+          <div class="carousel-slide">
+            <div>
+              <a href="worm/"><img src="images/case06.jpg" alt="case06" /></a>
+            </div>
+            <div class="slide-text-work">Mato</div>
+            <div class="slide-text-client">Oma projekti</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="module">
+        <div id="footer-container">
+          <div id="copyright">
+            &copy; 2025 Ville Eerikäinen. All rights reserved.
+          </div>
+          <div id="some-icon">
+            <a
+              href="https://www.linkedin.com/in/ville-eerikäinen"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
