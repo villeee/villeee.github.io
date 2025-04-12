@@ -1,119 +1,108 @@
-
-
 .menus-container {
-    display: flex;
-    position: relative;
-    justify-content: right;
-    align-items: center;
-    max-width: 1600px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 2rem 0 2rem;
+  box-sizing: border-box;
 }
-
-.menus-container a {
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Inherits color from the parent element */
-  }
 
 nav {
-    padding: 0.8rem;
-    display: flex;
-    background-color: rgb(4, 17, 32);
-   border-radius: 50%;
-   margin: 0;
+  padding: 0.8rem;
+  display: flex;
 }
 
-
-
 .ham-menu {
-    display: flex; /* Show ham-menu on mobile */
-    position: absolute;
-    align-items: center;
-    justify-content: center; /* Center spans inside the box */
-    width: 30px; /* Restore the original width */
-    height: 30px; /* Restore the original height */
-    cursor: pointer; /* Indicate it's clickable */
-    z-index: 11; /* Ensure ham-menu is above off-screen-menu */
-    position: relative; /* Ensure spans are positioned relative to this box */
-    background-color: transparent; /* No background for the box */
-    border: none; /* Remove any default borders */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 11;
+  position: relative;
+  background-color: transparent;
+  border: none;
 }
 
 .ham-menu span {
-    height: 3px; /* Restore the original height of spans */
-    width: 80%; /* Restore the original width of spans */
-    background-color: rgb(255, 255, 255);
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.3s ease;
+  height: 4px;
+  width: 100%;
+  background-color: rgb(158, 44, 44);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
 }
 
 .ham-menu span:nth-child(1) {
-    top: 25%; /* Restore the original position of the first span */
+  top: 20%;
 }
 
 .ham-menu span:nth-child(3) {
-    top: 75%; /* Restore the original position of the third span */
+  top: 80%;
 }
 
 .ham-menu.active span:nth-child(1) {
-    top: 50%; /* Move to center */
-    transform: translate(-50%, -50%) rotate(45deg); /* Rotate to form a cross */
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: white;
 }
 
 .ham-menu.active span:nth-child(2) {
-    opacity: 0; /* Hide the middle span */
+  opacity: 0;
 }
 
 .ham-menu.active span:nth-child(3) {
-    top: 50%; /* Move to center */
-    transform: translate(-50%, -50%) rotate(-45deg); /* Rotate to form a cross */
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: white;
 }
 
 .off-screen-menu {
-    display: flex; /* Ensure it's ready to animate on mobile */
-    background-color: rgb(10, 37, 68);
-    width: 100vw; /* Cover the full width of the viewport */
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -100vw; /* Completely hide off-screen-menu by default */
-    visibility: hidden; /* Ensure it's not visible */
-    opacity: 0; /* Make it transparent */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
-    z-index: 10;
-    transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; /* Smooth animation for sliding in */
+  display: flex; /* Ensure it's ready to animate on mobile */
+  background-color: rgb(10, 37, 68);
+  width: 100vw; /* Cover the full width of the viewport */
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100vw; /* Completely hide off-screen-menu by default */
+  visibility: hidden; /* Ensure it's not visible */
+  opacity: 0; /* Make it transparent */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  z-index: 10;
+  transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; /* Smooth animation for sliding in */
 }
 
 .off-screen-menu.active {
-    right: 0;
-    visibility: visible; /* Make it visible */
-    opacity: 1; /* Make it opaque */
+  right: 0;
+  visibility: visible; /* Make it visible */
+  opacity: 1; /* Make it opaque */
 }
 
 .off-screen-menu ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .off-screen-menu a {
-    color: white;
-    text-decoration: none;
-    text-transform: none;
-    transition: color 0.3s;
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  transition: color 0.3s;
 }
 
 .off-screen-menu a:hover {
-    text-decoration: none;
-    color: rgb(192, 51, 0);
-    margin: 0;
+  text-decoration: none;
+  color: rgb(192, 51, 0);
+  margin: 0;
 }
 
-.ham-menu a[href="#carousel"] {
+.ham-menu a[href='#carousel'] {
   cursor: pointer; /* Change cursor to pointer for better UX */
 }

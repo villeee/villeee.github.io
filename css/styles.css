@@ -1,15 +1,36 @@
 html {
   margin: 0;
   padding: 0;
-  font-family: 'League Spartan', sans-serif; /* Apply League Spartan font */
+  box-sizing: border-box;
+  font-family: 'DM Sans', sans-serif;
+  font-optical-sizing: auto;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #6fb1fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  z-index: 1; /* Behind navbar */
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .kuvateksti p {
@@ -19,19 +40,24 @@ p {
 }
 
 .logo {
-  top: 0;
-  left: 0;
   margin: 0 0 0 2rem;
+  height: 100%;
   font-size: 2rem;
   font-weight: 700;
   z-index: 10;
   text-align: left;
   color: rgb(192, 51, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
 }
 
 .logo a {
-  text-decoration: none; /* Removes the underline */
-  color: inherit; /* Inherits color from the parent element */
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  line-height: 1;
 }
 
 .topheadline {
@@ -52,7 +78,7 @@ p {
 h2 {
   display: block;
   font-size: 4rem;
-  color:rgb(10, 37, 68);
+  color: rgb(10, 37, 68);
   margin: 9rem 2rem 0 2rem;
 }
 
@@ -65,125 +91,101 @@ h2 {
   height: 100vh;
 }*/
 
+.carousel-header-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
 
+.carousel-header-headline {
+  color: #1f181c;
+}
 
-.carousel-header-images{
-    position: relative;
-    width: 100%;
-    height: 100vh; 
-    overflow: hidden; 
-  } 
+.carousel-header-images .gradient {
+  width: 100%;
+  height: 43vh;
+  bottom: 0;
+  background-image: linear-gradient(to top, rgb(2, 11, 23), transparent);
+  opacity: 0.8;
+  z-index: 11;
+  position: absolute;
+}
 
-  .carousel-header-headline {
-    color: #1f181c; 
-  }
+#bg1,
+#bg2,
+#bg3,
+#bg4,
+#bg5 {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
 
-  .carousel-header-images .gradient {
-    width: 100%;
-    height: 43vh;
-    bottom: 0;
-    background-image: linear-gradient(to top, rgb(3, 14, 23), transparent);
-    opacity: 0.80;
-    z-index: 11;
-    position: absolute;
-  }
-
-
-
- /* .carousel-header-headline h1{
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: rgb(255, 255, 255);
-    font-size: 5rem;  
-    top: 70%;
-    left: 50%;
-    left: 0;      
-    padding: 40px;   Lisää väliä reunasta tarvittaessa 
-  } */
-  
- 
-  #bg1, #bg2, #bg3, #bg4, #bg5 {
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; 
-    
-  }
-
-   /*#bg4 {
+/*#bg4 {
     background-size: contain;
     background-color: #1f181c;
     background-position: center center;
   } */
 
-  #bg1 {
-    
-    background-image: url('../images/01.jpg');
-    
-    z-index: 5; /* Päällimmäinen kuva */
-  }
-  
-  #bg2 {
-    background-image: url('../images/02.jpg');
-    z-index: 4;
-  }
-  
-  #bg3 {
-    background-image: url('../images/03.jpg');
-    z-index: 3;
-  }
+#bg1 {
+  background-image: url('../images/01.jpg');
 
-  #bg4 {
-    background-image: url('../images/04.jpg');
-    z-index: 2;
-  }
+  z-index: 5; /* Päällimmäinen kuva */
+}
 
-  #bg5 {
-    background-image: url('../images/05.jpg');
-    z-index: 1;
-  }
-  
+#bg2 {
+  background-image: url('../images/02.jpg');
+  z-index: 4;
+}
+
+#bg3 {
+  background-image: url('../images/03.jpg');
+  z-index: 3;
+}
+
+#bg4 {
+  background-image: url('../images/04.jpg');
+  z-index: 2;
+}
+
+#bg5 {
+  background-image: url('../images/05.jpg');
+  z-index: 1;
+}
+
 /* Container module */
 .module {
-  position: relative;
   width: 100%;
 }
 
-.header-container-frontpage {
+.header-frontpage {
   display: flex;
- /*max-width: 1600px;*/
-  justify-content: space-between; 
-  align-items: center;           
-  width: 100%;                   
-  padding: 20px;                 
-  box-sizing: border-box;        
-  position: absolute;            
-  top: 0;                        
-  left: 0;   
-  margin-top: 0.5rem;                   
-  z-index: 10;                  
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255, 1);
+  top: 0;
+  left: 0;
+  z-index: 30;
 }
 
 .menus-container {
   display: flex;
-  justify-content: flex-end; 
-  align-items: center;       
-  position: relative;
-}
-/*
-.module .header-container {
-  display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  position: absolute; /* Changed from absolute to relative 
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto; /* Ensures it's centered within the module 
-  z-index: 15; /* Keeps it above other content 
-}*/
+}
 
 /* Content wrapper inside the module */
 .module .container {
@@ -191,7 +193,6 @@ h2 {
   max-width: 1600px;
   overflow: visible; /* Allow the content to overflow */
   margin: 0 auto; /* Centers the wrapper within the module */
- 
 }
 
 .competences p {
@@ -199,32 +200,46 @@ h2 {
   margin: 2rem;
 }
 
+#footer-container {
+  display: flex;
+  justify-content: center; /* Horizontally center the child elements */
+  align-items: center; /* Vertically center the child elements */
+  flex-direction: row; /* Stack the child elements vertically */
+  text-align: center; /* Ensure text is centered */
+  padding: 1rem;
+  padding: 6rem 0; /* Adjust this value as needed */
+}
 
+#copyright {
+  margin: 0;
+  font-size: 1.25rem;
+  color: rgb(131, 131, 131);
+}
 
-  @keyframes fadeOut {
-    from {
-      clip-path: inset(0% 0% 0% 0%);
-    }
-    to {
-      clip-path: inset(0% 0% 100% 0%);
-    }
+@keyframes fadeOut {
+  from {
+    clip-path: inset(0% 0% 0% 0%);
   }
+  to {
+    clip-path: inset(0% 0% 100% 0%);
+  }
+}
 
-  @keyframes zoom_image {
-    from {
-      transform: scale(1.05);
-    }
-    to {
-      transform: scale(1);
-    }
+@keyframes zoom_image {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* Responsive styles for mobile devices */
 
 @media (max-width: 768px) {
-
   .logo {
     margin: 0;
+    padding: 0;
     font-size: 1.6rem;
   }
 
@@ -235,40 +250,37 @@ h2 {
 
   .carousel-header-images .gradient {
     height: 20vh;
-    opacity: 0.70;
- 
+    opacity: 0.7;
   }
 
-  .carousel-header-images{  
-    height: 80vh;  
-  } 
-  
+  .carousel-header-images {
+    height: 80vh;
+  }
+
   #bg1 {
     background-position: -170px;
-    height: 80vh; 
+    height: 80vh;
   }
 
   #bg2 {
     background-position: -100px;
-    height: 80vh; 
+    height: 80vh;
   }
 
   #bg3 {
     background-position: -10px;
-    height: 80vh; 
+    height: 80vh;
   }
 
   #bg4 {
     background-position: -90px;
-    height: 80vh; 
+    height: 80vh;
   }
 
   #bg5 {
     background-position: -80px;
-    height: 80vh; 
+    height: 80vh;
   }
-
-
 
   .topheadline {
     font-size: 2.2rem;
@@ -277,13 +289,12 @@ h2 {
 
   .competences p {
     font-size: 1.5rem;
-    margin: 2rem; 
+    margin: 2rem;
   }
 
   .container {
     margin-left: 2rem;
   }
-
 }
 
 /* Responsive styles for tablets and larger devices */

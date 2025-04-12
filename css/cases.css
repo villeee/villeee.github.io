@@ -1,28 +1,21 @@
 
-
-body {
-    margin: 0;
-    position: relative;
-  }
   
   .module .cases-container {
     width: 100%;
     max-width: 1600px;
-    overflow: visible; /* Allow the content to overflow */
-    margin: 0 auto; /* Centers the wrapper within the module */
-  
-   /* background-color: blue; */
+    overflow: visible; 
+    margin: 0 auto; 
   }
 
   .module .carousel-header {
-    display: flex; /* Asetetaan flexbox-rakenne */
-    justify-content: space-between; /* Erottaa otsikon ja nuolinapit */
-    align-items: center; /* Vertikaalinen kohdistus keskelle */
-    width: 100%; /* Varmistaa, että otsikko ja nuolinapit vievät koko leveyden */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; /
   }
 
   .module .carousel-header h2 {
-    margin: 2rem; /* Poistaa mahdolliset marginaalit otsikon ympäriltä */
+    margin: 2rem; 
     margin-top: 4rem;  
   }
   
@@ -56,10 +49,13 @@ body {
   }
   
   .carousel-arrow--prev {
+    color: #222;
     right: 0;
+    
   }
   
   .carousel-arrow--next {
+    color: #222;
     right: 0;
   }
   
