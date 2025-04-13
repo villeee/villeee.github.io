@@ -20,7 +20,6 @@ body {
   left: 0;
   width: 100%;
   height: 100vh;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,8 +231,12 @@ h2 {
   }
 
   h2 {
-    margin: 0 0 0 2rem;
+    margin: 3rem 0 0 2rem;
     font-size: 2.5rem;
+  }
+
+  .hero {
+    height: 80vh;
   }
 
   .carousel-header-images .gradient {
@@ -277,7 +280,7 @@ h2 {
 
   .competences p {
     font-size: 1.5rem;
-    margin: 2rem;
+    margin: 1rem 2rem 1rem 2rem;
   }
 
   .container {
