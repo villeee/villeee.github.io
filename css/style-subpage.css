@@ -181,7 +181,7 @@ footer {
 #nav a {
   text-decoration: none;
   text-transform: none;
-  
+
   font-size: 2rem;
   font-weight: 400;
   color: rgb(66, 66, 66);
@@ -267,9 +267,7 @@ h3 {
   margin: 0 auto; /* Centers the wrapper within the module */
 }
 
-#footer-container p {
-  padding: 6rem 0; /* Adjust this value as needed */ 
-}
+
 
 #copyright  {
   margin: 0;
@@ -300,13 +298,22 @@ h3 {
 
 @media (max-width: 768px) {
 
+  p {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    margin: 0.5rem 0 2rem 0;
+  }
+
+  .kuvateksti {
+    font-size: 1.2rem; 
+  }
+
 .logo {
   font-size: 1.5rem;
 }
 
 .container h5 {
   margin: 1rem 0 1rem 0;
-
  }
 
  h3 {

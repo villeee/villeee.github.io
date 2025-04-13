@@ -114,6 +114,11 @@
   }
   
   @media (max-width: 768px) {
+
+    .module .carousel-header h2 {
+      
+      margin: 1rem 0 0 2rem;  
+    }
   
     .carousel-container {
       width: calc(100vw - 4rem);

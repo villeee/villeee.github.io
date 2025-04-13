@@ -1,127 +1,118 @@
 .menus-container {
-    display: flex;
-    position: relative;
-    justify-content: right;
-    margin: 0 2rem 0 2rem;
+  display: flex;
+  position: relative;
+  justify-content: right;
+  margin: 0 2rem 0 2rem;
 }
 
 nav {
-    padding: 0.8rem;
-    display: flex;
-    width: 100%;
-   
+  padding: 0.8rem;
+  display: flex;
+  width: 100%;
 }
 
 .ham-menu {
-    display: flex; 
-    align-items: center;
-    justify-content: center; 
-    width: 30px; 
-    height: 30px; 
-    cursor: pointer; 
-    z-index: 11; 
-    position: relative; 
-    background-color: transparent; 
-    border: none; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 11;
+  position: relative;
+  background-color: transparent;
+  border: none;
 }
 
 .ham-menu span {
-    height: 4px; 
-    width: 100%; 
-    background-color: rgb(158, 44, 44);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: 0.3s ease;
+  height: 4px;
+  width: 100%;
+  background-color: rgb(158, 44, 44);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s ease;
 }
 
 .ham-menu span:nth-child(1) {
-    top: 20%; 
+  top: 20%;
 }
 
 .ham-menu span:nth-child(3) {
-    top: 80%; 
+  top: 80%;
 }
 
 .ham-menu.active span:nth-child(1) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    background-color: white;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background-color: white;
 }
 
 .ham-menu.active span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .ham-menu.active span:nth-child(3) {
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(-45deg);
-    background-color: white;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background-color: white;
 }
 
 .off-screen-menu {
-    display: flex; 
-    background-color: rgb(10, 37, 68);
-    width: 100vw; 
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: -100vw; 
-    visibility: hidden; 
-    opacity: 0; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 3rem;
-    z-index: 10;
-    transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; 
+  display: flex;
+  background-color: rgb(10, 37, 68);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  z-index: 10;
+  transition: right 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .off-screen-menu.active {
-    display: flex; 
-    right: 0;
-    visibility: visible; 
-    opacity: 1; 
+  display: flex;
+  right: 0;
+  visibility: visible;
+  opacity: 1;
 }
 
 .off-screen-menu ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex; 
-    flex-direction: column; 
-    gap: 10px; 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .off-screen-menu li {
-    text-align: center; 
+  text-align: center;
 }
 
 .off-screen-menu a {
-    color: white;
-    text-decoration: none;
-    text-transform: none;
-    transition: color 0.3s;
-    display: block;    
+  color: white;
+  text-decoration: none;
+  text-transform: none;
+  transition: color 0.3s;
+  display: block;
 }
 
 .off-screen-menu a:hover {
-    color: rgb(192, 51, 0);
+  color: rgb(192, 51, 0);
 }
 
-
-.ham-menu a[href="#carousel"] {
-  cursor: pointer; 
+.ham-menu a[href='#carousel'] {
+  cursor: pointer;
 }
-
-
 
 @media (max-width: 768px) {
-    
-    nav {
-        margin-right: 0.7rem;
-    }
-    
 }
