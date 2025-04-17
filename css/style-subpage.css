@@ -200,12 +200,13 @@ p {
   font-size: 1.5rem;
   line-height: 2.1rem;
   margin: 0.5rem 0 2rem 0;
+ 
 }
 
 .kuvateksti {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0 0 2rem 0;
-  padding: 0;
+  font-weight: 700;
   
 }
 
