@@ -195,8 +195,9 @@ h2 {
   display: flex;
   justify-content: center; /* Horizontally center the child elements */
   align-items: center; /* Vertically center the child elements */
-  flex-direction: row; /* Stack the child elements vertically */
+  flex-direction: column; /* Stack the child elements vertically */
   text-align: center; /* Ensure text is centered */
+  margin-top: 0;
 }
 
 #copyright {
@@ -227,7 +228,8 @@ h2 {
 
 @media (max-width: 768px) {
   .logo {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    margin-left: 1rem;
   }
 
   h2 {
@@ -264,7 +266,7 @@ h2 {
   }
 
   #bg4 {
-    background-position: -90px;
+    background-position: -200px;
     height: 80vh;
   }
 
@@ -274,8 +276,9 @@ h2 {
   }
 
   .topheadline {
-    font-size: 2.2rem;
-    margin: 0 2rem 2rem 0;
+    font-size: 2.4rem;
+    margin: 0rem 1.5rem 2rem 0rem;
+    max-width: 90%;
   }
 
   .competences p {
@@ -288,7 +291,8 @@ h2 {
   }
 
   #footer-container {
-    margin: 0; /* Adjust this value as needed */
+    margin: 0rem; /* Adjust this value as needed */
+    padding: 0rem;
   }
 }
 

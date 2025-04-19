@@ -147,7 +147,7 @@ iframe {
 }
 
 #page {
-  margin: 2rem;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensures the page container takes up the full height */
@@ -172,7 +172,6 @@ footer {
 #nav ul {
   margin: 0;
   list-style-type: none;
-  
   padding: 0;
   display: flex;
 }
@@ -204,9 +203,9 @@ p {
 }
 
 .kuvateksti {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0 0 2rem 0;
-  font-weight: 700;
+  font-weight: 600;
   
 }
 
@@ -306,11 +305,11 @@ h3 {
   }
 
   .kuvateksti {
-    font-size: 1.2rem; 
+    font-size: 1rem; 
   }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .container h5 {
