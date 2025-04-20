@@ -120,16 +120,9 @@ h2 {
   height: 100vh;
 }
 
-/*#bg4 {
-    background-size: contain;
-    background-color: #1f181c;
-    background-position: center center;
-  } */
-
 #bg1 {
   background-image: url('../images/01.jpg');
-
-  z-index: 5; /* Päällimmäinen kuva */
+  z-index: 5;
 }
 
 #bg2 {
