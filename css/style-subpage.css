@@ -162,7 +162,7 @@ iframe {
   color: rgb(10, 37, 68);
  /*background-color: rgb(10, 37, 68);*/
   padding: 2rem;
-  margin: 4rem 1rem 0 1rem;
+  margin: 4rem 1rem 0rem 1rem;
   border-top: 0.1rem solid rgb(10, 37, 68);
 }
 
@@ -343,7 +343,7 @@ h3 {
 }
 
 #footer-container {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 #copyright {
