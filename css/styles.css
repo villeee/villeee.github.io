@@ -249,6 +249,7 @@ h2 {
 
   .hero {
     height: 80vh;
+    touch-action: manipulation;
   }
 
   .carousel-header-images .gradient {
