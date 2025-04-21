@@ -295,6 +295,16 @@ h2 {
     overscroll-behavior: none;
   }
 
+  #bg1,
+  #bg2,
+  #bg3,
+  #bg4,
+  #bg5 {
+    background-attachment: fixed;
+    will-change: transform;
+    transform: translateZ(0); /* triggers hardware acceleration */
+  }
+
   .topheadline {
     font-size: 2.6rem;
     margin: 0rem 1.5rem 2rem 0rem;
