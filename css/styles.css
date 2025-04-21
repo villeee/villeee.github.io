@@ -259,31 +259,6 @@ h2 {
     height: 80vh;
   }
 
-  #bg1 {
-    background-position: -170px;
-    height: 80vh;
-  }
-
-  #bg2 {
-    background-position: -100px;
-    height: 80vh;
-  }
-
-  #bg3 {
-    background-position: -10px;
-    height: 80vh;
-  }
-
-  #bg4 {
-    background-position: -200px;
-    height: 80vh;
-  }
-
-  #bg5 {
-    background-position: -80px;
-    height: 80vh;
-  }
-
   .carousel-header-images,
   #bg1,
   #bg2,
