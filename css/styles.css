@@ -90,7 +90,6 @@ h2 {
   height: 100vh;
   overflow: hidden;
   z-index: 1;
-  touch-action: manipulation;
 }
 
 .carousel-header-headline {
@@ -249,7 +248,6 @@ h2 {
 
   .hero {
     height: 80vh;
-    touch-action: manipulation;
   }
 
   .carousel-header-images .gradient {
@@ -284,6 +282,17 @@ h2 {
   #bg5 {
     background-position: -80px;
     height: 80vh;
+  }
+
+  .carousel-header-images,
+  #bg1,
+  #bg2,
+  #bg3,
+  #bg4,
+  #bg5 {
+    touch-action: none;
+    -ms-touch-action: none;
+    overscroll-behavior: none;
   }
 
   .topheadline {
