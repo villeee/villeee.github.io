@@ -33,7 +33,7 @@
 .photo img {
   width: 100%;
   height: auto;
-  border-radius: 5px;
+ /* border-radius: 5px; */
   object-fit: cover;
 }
 
@@ -54,7 +54,7 @@
 .index-item-image-wrapper {
   position: relative;
   overflow: hidden;
-  border-radius: 5px;
+ /* border-radius: 5px; */
 }
 
 .index-item-image {
