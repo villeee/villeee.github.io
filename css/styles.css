@@ -23,12 +23,16 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #00aa00; /* Custom green */
+  background-color: rgb(10, 37, 68);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 99999;
-  transition: opacity 1s ease;
+  transition: opacity 0.2s ease;
+  color: white;
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
 }
 
 #splash-screen.fade-out {
@@ -190,7 +194,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 2rem 0 0 2rem;
+  margin: 0 2rem 0 0;
   height: 70px;
   box-sizing: border-box;
   background-color: rgb(255, 255, 255, 1);
@@ -201,8 +205,10 @@ h2 {
 
 .menus-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  position: relative;
+  justify-content: right;
+  margin: 0 2rem 0 2rem;
+  /*justify-content: flex-end;*/
 }
 
 /* Content wrapper inside the module */
@@ -270,9 +276,19 @@ h2 {
 /* Responsive styles for mobile devices */
 
 @media (max-width: 768px) {
+  #splash-screen {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+  }
+
   .logo {
     font-size: 1.8rem;
     margin-left: 1rem;
+  }
+
+  .menus-container {
+    margin: 0 1rem 0 2rem;
   }
 
   h2 {
@@ -319,7 +335,7 @@ h2 {
   }
 
   .topheadline {
-    font-size: 3.5rem;
+    font-size: 2.1rem;
     margin: 0rem 2rem 2rem 0rem;
     max-width: 90%;
   }
@@ -335,7 +351,6 @@ h2 {
 
   #footer-container {
     margin-top: 4rem;
-
     padding: 1rem;
   }
 

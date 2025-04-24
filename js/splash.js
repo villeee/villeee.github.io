@@ -6,5 +6,5 @@ window.addEventListener('load', () => {
     setTimeout(() => {
       splash.remove();
     }, 1000); // Wait for fade-out transition to finish
-  }, 2000); // Show splash for 2 seconds
+  }, 1000); // Show splash for 2 seconds
 });

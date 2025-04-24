@@ -1,9 +1,10 @@
+/*
 .menus-container {
   display: flex;
   position: relative;
   justify-content: right;
-  margin: 0 2rem 0 2rem;
-}
+  margin: 0 2 0 2rem;
+}*/
 
 nav {
   /* padding: 0.8rem;*/
@@ -116,4 +117,7 @@ nav {
 }
 
 @media (max-width: 768px) {
+  .ham-menu {
+    margin-right: 0rem;
+  }
 }
