@@ -40,12 +40,6 @@ body {
   pointer-events: none;
 }
 
-#splash-logo {
-  width: 120px;
-  opacity: 0;
-  animation: fadeInLogo 1s forwards;
-}
-
 @keyframes fadeInLogo {
   to {
     opacity: 1;
