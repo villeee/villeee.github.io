@@ -263,23 +263,13 @@ h2 {
   }
 }
 
-/*
-@keyframes zoom_image {
-  from {
-    transform: scale(1.05);
-  }
-  to {
-    transform: scale(1);
-  }
-}*/
-
 /* Responsive styles for mobile devices */
 
 @media (max-width: 768px) {
   #splash-screen {
     font-size: 2rem;
     font-weight: 500;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.15rem;
   }
 
   .logo {
