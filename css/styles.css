@@ -351,6 +351,12 @@ h2 {
 /* Responsive styles for tablets and larger devices */
 
 @media (min-width: 769px) and (max-width: 1280px) {
+  #splash-screen {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+
   .topheadline {
     font-size: 5rem;
     max-width: 90%;
