@@ -40,12 +40,6 @@ body {
   pointer-events: none;
 }
 
-@keyframes fadeInLogo {
-  to {
-    opacity: 1;
-  }
-}
-
 .hero {
   position: relative;
   top: 0;
